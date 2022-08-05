@@ -7,11 +7,11 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').then(reg => {
 
-        if(reg.installing) {
+        if (reg.installing) {
             console.log('Service worker installing');
-        } else if(reg.waiting) {
+        } else if (reg.waiting) {
             console.log('Service worker installed');
-        } else if(reg.active) {
+        } else if (reg.active) {
             console.log('Service worker active');
         }
 
@@ -20,5 +20,5 @@ if ('serviceWorker' in navigator) {
         console.log('Registration failed with ' + error);
     });
 } else {
-console.log("Service worker unsupported");
+    console.log("Service worker unsupported");
 }

@@ -95,7 +95,7 @@ class TimerElement {
      * @returns {easytimer.Timer}
      */
     createTimer() {
-        const timer = new easytimer.Timer({precision: 'secondTenths'});
+        const timer = new easytimer.Timer({ precision: 'secondTenths' });
         timer.addEventListener('secondsUpdated', () => this.updateText());
         return timer;
     }
@@ -197,8 +197,8 @@ class Menu {
         document.querySelectorAll(".period").forEach(period => periodHeadings.push(period.innerHTML));
         const timerData = rink.export();
         const csvData = timerData.map((row, i) => [periodHeadings[i], ...row].join(',')).join('\n');
-        const blob = new Blob([csvData], {type: 'text/csv;charset=utf-8'});
-        const fileName = (new Date()).toISOString().substring(0,10);
+        const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
+        const fileName = (new Date()).toISOString().substring(0, 10);
         saveAs(blob, fileName);
     }
 }

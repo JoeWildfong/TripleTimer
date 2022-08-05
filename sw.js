@@ -1,13 +1,13 @@
 STATIC_CACHE_NAME = "static-2.0";
 
 STATIC_CACHE_FILES = [
-  "/",
-  "/index.html",
-  "/triple-timer.css",
-  "/triple-timer.js",
-  "/easytimer.min.js",
-  "/FileSaver.min.js",
-  "/sw-control.js",
+    "/",
+    "/index.html",
+    "/triple-timer.css",
+    "/triple-timer.js",
+    "/easytimer.min.js",
+    "/FileSaver.min.js",
+    "/sw-control.js",
 ];
 
 self.addEventListener('install', event => {
