@@ -10,7 +10,7 @@ class Rink {
             this.#sections.push(timerElement);
             section.parentElement.addEventListener('click', () => this.focusSection(index));
         });
-        // a hockey game has 3 periods (excluding overtime)
+        // assume a 3-period game (excluding overtime)
         this.addPeriod();
         this.addPeriod();
         this.addPeriod();
