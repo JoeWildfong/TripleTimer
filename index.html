@@ -5,6 +5,7 @@
     <script src='/sw-control.js' async></script>
     <script src="/easytimer.min.js" defer></script>
     <script src="/triple-timer.js" defer></script>
+    <script src="/FileSaver.min.js" defer></script>
     <link rel="stylesheet" href="/triple-timer.css" />
     
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,6 +23,25 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 </head>
 <body>
+    <div id="menu-modal">
+        <div id="menu-items">
+            <button class="period" data-period="1">Period 1</button>
+            <button class="period" data-period="2">Period 2</button>
+            <button class="period" data-period="3">Period 3</button>
+            <button id="add-period">Add OT</button>
+            <button id="export">Export CSV</button>
+        </div>
+    </div>
+    <div id="menu">
+        <button id="menu-open">
+            <svg id="menu-svg" viewBox="0 0 310 260" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30 30H280"/>
+                <path d="M30 130H280"/>
+                <path d="M30 230H280"/>
+            </svg>
+        </button>
+        <span id="period-text">Period 1</h1>
+    </div>
     <div id="rink">
         <div id="left">
             <p class="timer">00:00</p>

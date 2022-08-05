@@ -3,15 +3,20 @@ html, body {
     height: 100%;
 }
 
-body {
+html {
     padding: 8px;
     box-sizing: border-box;
 }
 
-#rink {
+body {
     display: flex;
+    flex-direction: column;
+}
+
+#rink {
+    flex: 1 1 auto;
     width: 100%;
-    height: 100%;
+    display: flex;
     border: 5px solid black;
     border-radius: 25vh;
     box-sizing: border-box;
@@ -36,4 +41,104 @@ body {
 
 .active {
     background-color: rgb(243, 119, 47);
+}
+
+#menu {
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#menu-open {
+    height: 100%;
+    width: auto;
+    justify-self: flex-start;
+    background: none;
+    border: none
+}
+
+#menu-open > svg {
+    height: 100%;
+    width: auto;
+}
+
+#period-text {
+    font-size: 2em;
+    text-align: center;
+}
+
+#menu-modal {
+    display: none;
+}
+
+.menu-open #menu-modal {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.9);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#menu-items {
+    display: flex;
+    max-height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 5px;
+}
+
+#menu-items button {
+    width: 100%;
+    min-height: 40px;
+    text-align: center;
+    background-color:#555;
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: #ddd;
+}
+
+#add-period {
+    margin-top: 10px;
+}
+
+#export {
+    margin-top: 10px;
+}
+
+#menu-svg {
+    stroke: #000;
+    stroke-width: 40;
+    stroke-linecap: round;
+    transition: stroke 0.2s;
+}
+
+.menu-open #menu-svg {
+    stroke: white;
+}
+
+.menu-open #menu-open {
+    z-index: 10;
+}
+
+#menu-svg > path {
+    transition: transform 0.2s;
+    transform-origin: center center;
+}
+
+.menu-open #menu-svg > path:first-child  {
+    transform: rotate(45deg) translateY(100px);
+}
+
+.menu-open #menu-svg > path:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-open #menu-svg > path:last-child  {
+    transform: rotate(-45deg) translateY(-100px);
 }

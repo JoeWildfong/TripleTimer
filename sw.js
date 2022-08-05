@@ -1,4 +1,4 @@
-STATIC_CACHE_NAME = "static-1.0";
+STATIC_CACHE_NAME = "static-2.0";
 
 STATIC_CACHE_FILES = [
   "/",
@@ -6,6 +6,7 @@ STATIC_CACHE_FILES = [
   "/triple-timer.css",
   "/triple-timer.js",
   "/easytimer.min.js",
+  "/FileSaver.min.js",
   "/sw-control.js",
 ];
 
