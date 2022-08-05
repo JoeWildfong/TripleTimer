@@ -1,4 +1,7 @@
-if (location.protocol !== 'https:') {
+if (
+    location.protocol !== 'https:' && 
+    !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)
+) {
     location.replace(`https:${location.href.substring(location.protocol.length)}`);
 }
 navigator.serviceWorker.addEventListener('controllerchange', () => {
