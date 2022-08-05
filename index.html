@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='/sw-control.js' async></script>
+    <script src="/easytimer.min.js" defer></script>
+    <script src="/triple-timer.js" defer></script>
+    <link rel="stylesheet" href="/triple-timer.css" />
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="An app to track zone times in hockey games.">
+    <meta name="theme-color" content="black">
+    <title>Triple Timer</title>
+    <link href="manifest.json" rel="manifest" />
+    
+    <!-- iOS tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Timer">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body>
+    <div id="rink">
+        <div id="left">
+            <p class="timer">00:00</p>
+        </div>
+        <div id="center">
+            <p class="timer">00:00</p>
+        </div>
+        <div id="right">
+            <p class="timer">00:00</p>
+        </div>
+    </div>
+</body>
+</html>
